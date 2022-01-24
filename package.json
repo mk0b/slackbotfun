@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "axios": "^0.25.0",
-    "slackbots": "^1.2.0"
+    "axios": "^0.25.0"
   }
 }
