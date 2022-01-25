@@ -1,3 +1,6 @@
+//when you say something in a channel it responds want to figure this one out.
+//connect to API(s)
+//host somewhere eventually
 
 //Setting the server
 const { App } = require("@slack/bolt");
@@ -33,7 +36,17 @@ app.message('animal', async ({ command, say }) => {
     try {
         say('Woot! The message works. Cats are soft 🐈.');
     } catch(error) {
-        console.log(err)
+        console.log('err')
+        console.log(error)
+    }
+});
+
+//listen for @ mentions
+app.event('app_mention', async ({ event, context, client, say }) => {
+    try {
+        say('Did I hear my name being called? Here is your random animal fact: Random Animal Fact.');
+    } catch(error) {
+        console.log('err')
         console.log(error)
     }
 });
