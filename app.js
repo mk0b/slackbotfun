@@ -17,3 +17,13 @@ const app = new App({
   console.log(`⚡️ Slack Bolt app is running on port ${port}!`);
 })();
 
+//slash command to get 1 random animal fact!
+app.command('/animalfact', async ({ command, ack, say }) => {
+    try {
+        await ack();
+        say('Yay! The command is working. Dogs are loyal 🐕.')
+    } catch (error) {
+        console.log('err')
+        console.log(error)
+;    }
+});
