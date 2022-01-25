@@ -27,3 +27,13 @@ app.command('/animalfact', async ({ command, ack, say }) => {
         console.log(error)
 ;    }
 });
+
+//respond to messages
+app.message('animal', async ({ command, say }) => {
+    try {
+        say('Woot! The message works. Cats are soft 🐈.');
+    } catch(error) {
+        console.log(err)
+        console.log(error)
+    }
+});
