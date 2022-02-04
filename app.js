@@ -31,7 +31,7 @@ app.command('/animalfact', async ({ command, ack, say }) => {
 ;    }
 });
 
-//respond to messages
+//respond to direct messages
 app.message('animal', async ({ command, say }) => {
     try {
         say('Woot! The message works. Cats are soft 🐈.');
@@ -50,3 +50,16 @@ app.event('app_mention', async ({ event, context, client, say }) => {
         console.log(error)
     }
 });
+
+//respond to strings that show up in channels the bot is added to
+
+const dogApiUrl = 'https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all';
+
+
+// Dog Facts API https://dukengn.github.io/Dog-facts-API/
+const testingDogApi = (url) => {
+    console.log('URL: ', url);
+    console.log('Calling Dog API.');
+};
+
+testingDogApi(dogApiUrl);
